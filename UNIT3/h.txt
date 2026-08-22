@@ -1,0 +1,723 @@
+    1  pwd
+    2  ls -a
+    3  ls -al
+    4  mkdir cp
+    5  cd ..
+    6  ls -al
+    7  cp ./tmp /home/incognito/cp/
+    8  cp -R ./tmp /home/incognito/cp/
+    9  sudo cp -R ./tmp /home/incognito/cp/
+   10  cd /home/incognito
+   11  pwd
+   12  ls -al
+   13  ls -al /cp/
+   14  ls -al cp/
+   15  cd cp
+   16  ls -al
+   17  cd ..
+   18  cp -a ./* c/
+   19  ls -al cp
+   20  ls -al /cp/
+   21  ls -al cp/
+   22  ls -al
+   23  ls -al c/
+   24  ls -al cp/
+   25  rm -r cp
+   26  sudo rm -r cp
+   27  ls -al
+   28  cd c
+   29  ls -al
+   30  cd ./
+   31  ls -al
+   32  ls -al .
+   33  ls -al tmp
+   34  ls -al ../
+   35  cd .
+   36  cd 
+   37  ls -al
+   38  sudo rm -r c
+   39  ls -al
+   40  cat hosts
+   41  ls -al
+   42  cat /hosts
+   43  ls -al ../
+   44  pwd
+   45  cd
+   46  ls -al ../../
+   47  ls -al
+   48  mkdir
+   49  mkdir {d1,d2}
+   50  ls -ak
+   51  cd d1
+   52  touch file1 
+   53  echo "examples for hard and soft links" >>file1
+   54  ln file1 hardf1
+   55  ls -al
+   56  echo "changes" >>hardf1
+   57  ls -al
+   58  cat file1 hardf1
+   59  ln -s hardf1 softf1
+   60  ls -al
+   61  cat softf1
+   62  ls -id
+   63  ls -id file1 hardf1 softf1
+   64  ls -il file1 hardf1 softf1
+   65  echo "soft changes" >>soft1
+   66  ls -il file1 hardf1 softf1
+   67  cat softf1 hardf1 file1
+   68  echo "soft changes" >> softf1
+   69  cat softf1 hardf1 file1
+   70  ls -il file1 hardf1 softf1
+   71  rm hard1
+   72  rm hardf1
+   73  ls -il file1 hardf1 softf1
+   74  cat softf1
+   75  cd ..
+   76  rm -r {d1,d2}
+   77  ls -al
+   78  cat .bash_history
+   79  rm  .bash_history
+   80  ls -al
+   81  find / -user "incognito"
+   82  find / .name "incognito*"
+   83  sudo find / -size 
+   84  sudo find / -size +5g
+   85  sudo find / -size +5G
+   86  find / -type f exec grep -l incognito \;
+   87  find / ../../etc -type f exec grep -l incognito \;
+   88  find ../../etc -type f exec grep -l incognito \;
+   89  find ../../etc exec grep -l incognito \;
+   90  find ../../etc exec grep incognito \;
+   91  ls -al
+   92  mkdir ditar
+   93  mkdir d2tar
+   94  touch ditar/file{1-15}
+   95  touch d2tar/textfiles{0-10}
+   96  rm d2tar/textfiles0
+   97  ls -al d2tar
+   98  ls -al ditar/
+   99  cd ditar
+  100  touch file{1-15}
+  101  ls -al
+  102  touch file{1,2}
+  103  ls -al
+  104  touch file{2_17}
+  105  ls al
+  106  ls -al
+  107  cd ..
+  108  rm -rf ditar d2tar
+  109  ls -al
+  110  touch file[1-15]
+  111  ls-al
+  112  ls -al
+  113  rm  file[1-15]
+  114  ls -al
+  115  touch file{1-15}.txt
+  116  s -al
+  117  ls -al
+  118  touch file_{1-15}.txt
+  119  ls -al
+  120  rm file_{1-15}.txt
+  121  rm file{1-15}.txt
+  122  ls -al
+  123  touch file{1..15}.txt
+  124  ls -al
+  125  rm fi*.txt
+  126  ls -al
+  127  tar cvf zip.tar .
+  128  ls -al
+  129  tar -tvf zip.tar
+  130  zip.tar
+  131  tar -xvf zip.tar -C f1/
+  132  mkdir f1 \ tar -xvf zip.tar -C f1/
+  133  mkdir f1
+  134  tar -xvf zip.tar -C f1/
+  135  ls -al
+  136  cd f1
+  137  ls -id 
+  138  ls -al
+  139  rm -rf ../f1
+  140  ls -al
+  141  cd
+  142  ls -al
+  143  rm zip.tar
+  144  ls -al
+  145  tree ../../
+  146  tree .
+  147  tree .treetree 
+  148  tree \
+  149  tree \..
+  150  sudo dnf install tree
+  151  tree ../../
+  152  cd ..
+  153  tree
+  154  ls -al
+  155  tree bin
+  156  ls -al
+  157  tree home
+  158  tree usr
+  159  clear
+  160  sudo dnf install clear
+  161  reset
+  162  restart
+  163  cd home/incoginto
+  164  cd home
+  165  cd incognito
+  166  ls -al
+  167  time sudo czvf file.tar.gz .
+  168  time sudo zvf file.tar.gz .
+  169  time sudo zvf file.gz .
+  170  time sudo tar zvf file.tar.gz .
+  171  tar --usage
+  172  ls -al
+  173  time sudo tar -czvf file.tar.gz .
+  174  ls -al
+  175  time sudo tar -cjvf file.tar.bz2 .
+  176  time sudo tar -cJvf file.tar.xz .
+  177  ls -al
+  178  mkdir {ex1,ex2}
+  179  mkdir exz[1-3]
+  180  ls -al
+  181  mkdir exz[3..5]
+  182  ls -al
+  183  mkdir exz{1-3}
+  184  ls -al
+  185  mkdir exzb[4...15]
+  186  ls -al
+  187  rm ex
+  188  rm ex*
+  189  rm -rf ex*
+  190  ls -al
+  191  mkdir {ex1,ex2,ex3}
+  192  ls -al
+  193   tar -xjvf file.tar.bz2 -C ex2
+  194   tar -xjvf file.tar.bz2 -C ex2/
+  195   tar -xzvf file.tar.gz -C ex2/
+  196   tar -xjvf file.tar.bzip2 -C ex2/
+  197   tar -xJvf file.tar.xz -C ex3/
+  198  ls -al ex2/
+  199  rm -rf [ex,file]
+  200  ls -al
+  201  rm -rf [e,x]*
+  202  ls -al
+  203  rm -rf [ex,file]*
+  204  ls -al
+  205  lsblk
+  206  ls -al
+  207  ls -al ../../
+  208  tree ../../etc
+  209  lsblk
+  210  clear
+  211  history
+  212  exit
+  213  pwd
+  214  ls /
+  215  ls -a /home
+  216  ls home
+  217  clear
+  218  cat history
+  219  ls 
+  220  ls /
+  221  ls /home
+  222  ls /home/incognito
+  223  ls -a
+  224  cat .bat_history
+  225  cd text
+  226  ls
+  227  cat textfile1.txt
+  228  vim textfile1.txt
+  229  tac textfile1.txt
+  230  grep -i "Ok" <textfile1.txt
+  231  grep -in "Ok" <textfile1.txt
+  232  grep -vn "Ok" <textfile1.txt
+  233  grep -n "Ok" <textfile1.txt
+  234  grep -n "ok" <textfile1.txt
+  235  grep -n "o?" <textfile1.txt
+  236  grep -n ???? <textfile1.txt
+  237  history
+  238  sort extfile1.txt
+  239  sort textfile1.txt
+  240  sort -n textfile1.txt
+  241  sort -v textfile1.txt
+  242  sort --help
+  243  sort -r textfile1.txt
+  244  sort --key=text textfile1.txt
+  245  sort -M textfile1.txt
+  246  cut --help
+  247  cut --delimiter=' ' textfile1.txt
+  248  cut -b textfile1.txt
+  249  Week 1: Kubernetes Fundamentals + kubectl Confidence 
+  250  Goal 
+  251  Understand cluster architecture and deploy/manage apps with kubectl. 
+  252  Day 1 
+  253   Concepts: 
+  254   K8s architecture: control plane, worker node, API server, scheduler, controller manager, etcd, 
+  255  kubelet, kube-proxy 
+  256   Lab: 
+  257   Install local cluster (minikube or kind) 
+  258   kubectl cluster-info 
+  259   kubectl get nodes -o wide 
+  260   kubectl get all -A 
+  261   Output: 
+  262   One markdown note with architecture diagram 
+  263  Day 2 
+  264   Concepts: 
+  265   Pod lifecycle, single-container vs multi-container pod 
+  266   Lab: 
+  267   Run pod imperatively (kubectl run) 
+  268   Inspect: describe, logs, exec 
+  269   Delete/recreate pod 
+  270   Output: 
+  271   Pod debugging notes 
+  272  Day 3 
+  273   Concepts: 
+  274   Declarative management (YAML, kubectl apply) 
+  275   Lab: 
+  276   Create pod.yaml and deployment.yaml 
+  277   Apply/update manifests 
+  278   Compare replace vs apply 
+  279   Output: 
+  280   First repo folder: k8s-basics/week1 
+  281  Day 4 
+  282   Concepts: 
+  283   Deployment, ReplicaSet, desired state, self-healing 
+  284   Lab: 
+  285   Scale deployment replicas up/down 
+  286   Kill pod manually, observe replacement 
+  287   Output: 
+  288   Screenshot/log proof of self-heal 
+  289  Day 5 
+  290   Concepts: 
+  291   Rollout strategy basics 
+  292   Lab: 
+  293   Update image tag 
+  294   kubectl rollout status/history/undo 
+  295   Output: 
+  296   Rollback practice log 
+  297  Day 6 (Revision + mini test) 
+  298   30 MCQs or self-questions 
+  299   Rebuild deployment from scratch without notes 
+  300  Day 7 (Light) 
+  301   Write “K8s week 1 in my own words” doc (very useful for interview memory) 
+  302  Week 2: Services, Networking, Ingress 
+  303  Goal 
+  304  Make services talk to each other and expose app externally. 
+  305  Day 1 
+  306   Concepts: 
+  307  Week 1: Kubernetes Fundamentals + kubectl Confidence 
+  308  Goal 
+  309  Understand cluster architecture and deploy/manage apps with kubectl. 
+  310  Day 1 
+  311   Concepts: 
+  312   K8s architecture: control plane, worker node, API server, scheduler, controller manager, etcd, 
+  313  kubelet, kube-proxy 
+  314   Lab: 
+  315   Install local cluster (minikube or kind) 
+  316   kubectl cluster-info 
+  317   kubectl get nodes -o wide 
+  318   kubectl get all -A 
+  319   Output: 
+  320   One markdown note with architecture diagram 
+  321  Day 2 
+  322   Concepts: 
+  323   Pod lifecycle, single-container vs multi-container pod 
+  324   Lab: 
+  325   Run pod imperatively (kubectl run) 
+  326   Inspect: describe, logs, exec 
+  327   Delete/recreate pod 
+  328   Output: 
+  329   Pod debugging notes 
+  330  Day 3 
+  331   Concepts: 
+  332   Declarative management (YAML, kubectl apply) 
+  333   Lab: 
+  334   Create pod.yaml and deployment.yaml 
+  335   Apply/update manifests 
+  336   Compare replace vs apply 
+  337   Output: 
+  338   First repo folder: k8s-basics/week1 
+  339  Day 4 
+  340   Concepts: 
+  341   Deployment, ReplicaSet, desired state, self-healing 
+  342   Lab: 
+  343   Scale deployment replicas up/down 
+  344   Kill pod manually, observe replacement 
+  345   Output: 
+  346   Screenshot/log proof of self-heal 
+  347  Day 5 
+  348   Concepts: 
+  349   Rollout strategy basics 
+  350   Lab: 
+  351   Update image tag 
+  352   kubectl rollout status/history/undo 
+  353   Output: 
+  354   Rollback practice log 
+  355  Day 6 (Revision + mini test) 
+  356   30 MCQs or self-questions 
+  357   Rebuild deployment from scratch without notes 
+  358  Day 7 (Light) 
+  359   Write “K8s week 1 in my own words” doc (very useful for interview memory) 
+  360  Week 2: Services, Networking, Ingress 
+  361  Goal 
+  362  Make services talk to each other and expose app externally. 
+  363  Day 1 
+  364   Concepts: 
+  365   Labels, selectors, namespaces 
+  366   Lab: 
+  367   Create dev namespace 
+  368   Deploy app with proper labels 
+  369   Filter resources by labels and namespace 
+  370  Day 2 
+  371   Concepts: 
+  372   Service types: ClusterIP, NodePort, LoadBalancer 
+  373   Lab: 
+  374   Expose backend using ClusterIP 
+  375   Curl from another pod using service DNS 
+  376   Output: 
+  377   Service DNS test evidence 
+  378  Day 3 
+  379   Concepts: 
+  380   CoreDNS and internal service discovery 
+  381   Lab: 
+  382   Use busybox/alpine pod to test DNS resolution 
+  383   Validate backend via service name 
+  384  Day 4 
+  385   Concepts: 
+  386   NodePort use cases and limits 
+  387   Lab: 
+  388   Expose frontend via NodePort 
+  389   Access app from browser 
+  390  Day 5 
+  391   Concepts: 
+  392   Ingress controller + Ingress resource 
+  393   Lab: 
+  394   Install nginx ingress controller (local) 
+  395   Route /api to backend and / to frontend 
+  396   Output: 
+  397   Path-based routing demo 
+  398  Day 6 
+  399   Troubleshooting day: 
+  400   Service selector mismatch 
+  401   Pod not ready but service exists 
+  402   Ingress backend errors 
+  403   Write runbook: “No endpoint available” checklist 
+  404  Day 7 
+  405   Revision + 1-page summary of networking model 
+  406  Week 3: ConfigMaps, Secrets, Volumes, Persistence 
+  407  Goal 
+  408  Run real apps with env config and persistent storage. 
+  409  Day 1 
+  410   Concepts: 
+  411   ConfigMap (env vars and mounted files) 
+  412   Lab: 
+  413   App reads config from ConfigMap 
+  414   Update ConfigMap and reload app behavior 
+  415  Day 2 
+  416   Concepts: 
+  417   Secret handling (base64, env/mount), security cautions 
+  418   Lab: 
+  419   DB credentials via Secret 
+  420   Verify app can connect securely 
+  421  Day 3 
+  422   Concepts: 
+  423   Volume types, PV/PVC/StorageClass basics 
+  424   Lab: 
+  425   Create PVC and mount into pod 
+  426   Write data, restart pod, confirm persistence 
+  427  Day 4 
+  428   Concepts: 
+  429   Stateful workloads (StatefulSet intro) 
+  430   Lab: 
+  431   Deploy simple DB with PVC 
+  432   Validate stable identity and storage behavior 
+  433  Day 5 
+  434   Concepts: 
+  435   Backup awareness (logical backups for DB) 
+  436   Lab: 
+  437   Backup and restore test for local DB 
+  438   Output: 
+  439   “Data recovery steps” note 
+  440  Day 6 
+  441   Mini project: 
+  442   Frontend + backend + DB 
+  443   ConfigMap + Secret + PVC 
+  444   Output: 
+  445   Clean folder structure and README 
+  446  Day 7 
+  447   Revision + mock interview Q/A (storage + secrets) 
+  448  Week 4: Probes, Resources, Scheduling, Reliability Basics 
+  449  Goal 
+  450  Make workloads production-ready at pod level. 
+  451  Day 1 
+  452   Concepts: 
+  453   requests and limits, scheduler behavior 
+  454   Lab: 
+  455   Add resources to frontend/backend 
+  456   Observe kubectl top metrics 
+  457  Day 2 
+  458   Concepts: 
+  459   Liveness vs readiness vs startup probes 
+  460   Lab: 
+  461   Add all probes 
+  462   Simulate unhealthy app and watch restart/traffic behavior 
+  463  Day 3 
+  464   Concepts: 
+  465   Node selector, taints/tolerations, affinity basics 
+  466   Lab: 
+  467   Schedule specific workloads onto labeled node (if possible in local setup) 
+  468   Test taint/toleration scenario 
+  469  Day 4 
+  470   Concepts: 
+  471   PodDisruptionBudget intro, graceful shutdown basics 
+  472   Lab: 
+  473   Add terminationGracePeriodSeconds 
+  474   Simulate rolling restart behavior 
+  475  Day 5 
+  476   Concepts: 
+  477   HPA basics (CPU based) 
+  478   Lab: 
+  479   Configure HPA 
+  480   Generate load and observe scale out/in 
+  481  Day 6 
+  482   Mini project: 
+  483   Production-style manifest update: 
+  484   probes 
+  485   resources 
+  486   autoscaling 
+  487   Output: 
+  488   before/after reliability comparison 
+  489  Day 7 
+  490   Revision + “first 4 weeks retrospective” 
+  491   What broke most often? 
+  492   What commands saved time? 
+  493   What to improve in weeks 5–8? 
+  494  End of First Half (Week 1–4) Milestones 
+  495  You should be able to: 
+  496   Deploy and update apps declaratively 
+  497   Expose services internally and externally 
+  498   Use Ingress for routing 
+  499   Manage config and secrets correctly 
+  500   Run persistent DB-backed app 
+  501   Configure probes/resources/HPA 
+  502   Troubleshoot common failures with confidence 
+  503  Minimum Command Set You Must Master by Week 4 
+  504   kubectl get 
+  505   kubectl describe 
+  506   kubectl logs 
+  507  vim textfile1.txt
+  508  cut --
+  509   kubectl describe 
+  510  cut --bytes=kubectl textfile1.txt
+  511  cut --bytes='kubectl' textfile1.txt
+  512  exit
+  513  ls -al  /etc/default
+  514  sudo cat /etc/default/useradd
+  515  who
+  516  last
+  517  getent passwd incognito
+  518  chage -l
+  519  sudo useradd alex,bob,jac
+  520  sudo useradd alex
+  521  sudo useradd bob
+  522  sudo useradd jac
+  523  sudo cat /etc/passwd
+  524  ls -l /home
+  525  chage -E alex
+  526  chage -E 20261230 alex
+  527  sudo chage -E 20261230 alex
+  528  sudo chage -E 20261230 jac
+  529  sudo chage -E 20261230 bob
+  530  sudo groupadd sales
+  531  sudo usermod -aG sales alex
+  532  sudo usermod -aG sales bob
+  533  ls -l /home/
+  534  ls -l alex
+  535  echo "password" | sudo passwd stdin alex
+  536  echo "password" | sudo passwd --stdin alex
+  537  for i in alex bob jac do echo "pas1212" | sudo passwd --stdin i
+  538  for i in alex bob jac do echo "pas1212" | sudo passwd --stdin $i done
+  539  for i in alex bob jac do echo pas1212 | sudo passwd --stdin $i done
+  540  for i in alex bob jac; do echo pas1212 | sudo passwd --stdin $i; done
+  541  for i in alex bob jac; do echo pas121212 | sudo passwd --stdin $i; done
+  542  for i in alex bob jac; do echo pas445878 | sudo passwd --stdin $i; done
+  543  su jac
+  544  umask
+  545  ls -l /etc.groups
+  546  ls -l /etc/groups
+  547  ls -l /etc/group
+  548  sudo cat /etc/group
+  549  ls -l /home
+  550  vim /home/bob/simplebash.sh
+  551  sudo chmod +x /home/bob/simplebash.sh
+  552  touch /home/bob/simplebash.sh
+  553  sudo touch /home/bob/simplebash.sh
+  554  sudo chmod +x /home/bob/simplebash.sh
+  555  vim /home/bob/simplebash.sh
+  556  ls -l /home/bob/simplebash.sh
+  557  sudo ls -l /home/bob/simplebash.sh
+  558  su -bob
+  559  su - bob
+  560  sudo rm -rf /home/bob
+  561  ls -l /data/sales
+  562  ls /
+  563  lsblk
+  564  sudo ls -l /dev/
+  565  sudo sort -t ' ' k $5 /dev/
+  566  sudo sort -t ' ' -k $5 /dev/
+  567  sudo sort -t ' ' -k $4 /dev/
+  568  sudo sort -t ' ' -k $1 /dev/
+  569  sudo ls -l /dev/ | sort -rn
+  570  sudo fdisk p
+  571  df -hT /home
+  572  sudo blkid /dev/sdd
+  573  sudo blkid /dev/sda
+  574  sudo blkid /dev/sdb
+  575  sudo blkid /dev/sdc
+  576  sudo mount -a
+  577  sudo lsblk
+  578  fdisk /dev/sdb
+  579  sudo fdisk /dev/sdb
+  580  sudo findmnt
+  581  history
+  582  ip a
+  583  ip addr show
+  584  ip addr add dev eth0 192.0.0.1/24
+  585  sudo ip addr add dev eth0 192.0.0.1/24
+  586  ip a
+  587  ip route show
+  588  ip link
+  589  hostnamectl
+  590  sudo hostnamectl hostname DESKTOP-V29
+  591  hostnamectl
+  592  sudo vim /etc/hosts
+  593  sudo dnf install -y nmap
+  594  nmap --version
+  595  sudo nmap -ns 172.24.3.216/20
+  596  sudo nmap -ns 172.24.3.216
+  597  sudo nmap -ns 172.24.0.1
+  598  sudo nmap -sn 172.24.0.1
+  599  sudo nmap -sn 172.24.3.216/20
+  600  ss
+  601  ss | grep tcp
+  602  ss | grep tcp {}
+  603  restart
+  604  exit
+  605  systemctl -t help
+  606  systemctl 
+  607  sudo systemctl list-unit
+  608  sudo systemctl -list-unit
+  609  sudo systemctl --list-unit
+  610  sudo systemctl list-units
+  611  systemctl status sshd.service
+  612  systemctl stop sshd.service
+  613  systemctl status sshd.service
+  614  systemctl get-default
+  615  su - bob
+  616  sudo dnf install k6
+  617  sudo dnf install https://dl.k6.io/rpm/repo.rpm
+  618  k6 -version
+  619  sudo dnf uninstall https://dl.k6.io/rpm/repo.rpm
+  620  sudo dnf uninstall k6-rpm
+  621  /bin/dnf
+  622  sudo dnf remove k6-rpm
+  623  exit
+  624  ip -c address show
+  625  ip route show
+  626  host google.com
+  627  sudo cat /etc/resolv.conf
+  628  sudo cat /etc/nsswitch.conf
+  629  hostnamectl status
+  630  sudo ss -tulpn
+  631  dnf groupslist
+  632  dnf 
+  633  dnf list
+  634  sudo find / .ssh
+  635  exit
+  636  ip a
+  637  ssh incognito@172.24.3.216
+  638  sudo dnf serach ssh
+  639  sudo dnf search ssh
+  640  sudo apt update && sudo apt install openssh-client
+  641  sudo dnf update && sudo dnf install openssh-client
+  642  sudo dnf install openssh-clients
+  643  sudo dnf history list
+  644  ssh incognito@172.24.3.216
+  645  ssh -p 2222 incognito@172.24.3.216
+  646  ssh -vvv -p 2222 incognito@172.24.3.216
+  647  sudo ls -la ~/.ssh/
+  648  cat .ssh/known_hosts
+  649  ssh 
+  650  ssh_keygen
+  651  sudo dnf install ssh_keygen
+  652  which ssh-keygen
+  653  ssh-keygen
+  654  ssh-copy-id incognito@172.24.3.216
+  655  ssh-copy-id -p 2222 incognito@172.24.3.216
+  656  sudo vim /etc/ssh/sshd-config
+  657  sudo vim /etc/ssh/sshd_config
+  658  sudo ls /etc/ssh/
+  659  sudo cat /etc/ssh/sshd_config
+  660  sudo vim /etc/ssh/sshd_config
+  661  ssh-copy-id -p 2222 incognito@172.24.3.216
+  662  ssh-keygen
+  663  ssh-copy-id -p 2222 incognito@172.24.3.216
+  664  sudo vim /etc/ssh/sshd_config
+  665  ps -t pts/3 -f
+  666  jobs -l
+  667  fg
+  668  jobs -l
+  669  ps -fp 4021
+  670  ssh -p 2222 incognito@172.24.3.216
+  671  ssh-copy-id -p 2222 incognito@172.24.3.216
+  672  ssh -p 2222 incognito@172.24.3.216
+  673  exit
+  674  sudo systemctl status sshd
+  675  sudo firewall-cmd --list-all
+  676  sudo systemctl reload sshd
+  677  sudo systemctl status sshd
+  678  sudo systemctl stop sshd
+  679  sudo systemctl status sshd
+  680  sudo systemctl start --now sshd
+  681  sudo systemctl status sshd
+  682  sudo sshd -t
+  683  sudo sshd -T | grep -Ei 'passwordauthentication|kbdinteractiveauthentication|pubkeyauthentication'
+  684  sudo vim /etc/ssh/sshd_config
+  685  sudo sshd -t
+  686  sudo sshd -T | grep -Ei 'passwordauthentication|kbdinteractiveauthentication|pubkeyauthentication'
+  687  sudo systemctl stop sshd
+  688  sudo systemctl status sshd
+  689  sudo systemctl start --now sshd
+  690  sudo systemctl status sshd
+  691  sudo sshd -T | grep -Ei 'passwordauthentication|kbdinteractiveauthentication|pubkeyauthentication'
+  692  sudo vim /etc/ssh/sshd_config
+  693  sudo systemctl stop sshd
+  694  sudo systemctl reload sshd
+  695  sudo systemctl start --now sshd
+  696  sudo systemctl reload sshd
+  697  sudo systemctl status sshd
+  698  sudo sshd -T | grep -Ei 'passwordauthentication|kbdinteractiveauthentication|pubkeyauthentication'
+  699  sudo vim /etc/ssh/sshd_config
+  700  ps -fp 4021
+  701  ps aux | grep '[v]im'
+  702  sudo sshd -T | grep -Ei 'passwordauthentication|kbdinteractiveauthentication|pubkeyauthentication'
+  703  ls /etc/ssh/sshd*
+  704  sudo vim /etc/ssh/sshd_config
+  705  sudo systemctl reload sshd
+  706  sudo systemctl stop sshd
+  707  sudo systemctl start --now sshd
+  708  sudo sshd -T | grep -Ei 'passwordauthentication|kbdinteractiveauthentication|pubkeyauthentication'
+  709  sudo vim /etc/ssh/sshd_config
+  710  sudo grep -nEi 'PasswordAuthentication|KbdInteractiveAuthentication|PubkeyAuthentication' /etc/ssh/sshd_config
+  711  sudo grep -RniE '^[[:space:]]*(PasswordAuthentication|KbdInteractiveAuthentication|PubkeyAuthentication)' /etc/ssh/sshd_config /etc/ssh/sshd_config.d/ 2>/dev/null
+  712  sudo sshd -T | grep -Ei 'passwordauthentication|kbdinteractiveauthentication|pubkeyauthentication'
+  713  sudo cat /etc/ssh/sshd_config.d/50-cloud-init.conf
+  714  sudo vim /etc/ssh/sshd_config.d/50-cloud-init.conf
+  715  sudo cat /etc/ssh/sshd_config.d/50-cloud-init.conf
+  716  sudo sshd -T | grep -Ei 'passwordauthentication|kbdinteractiveauthentication|pubkeyauthentication'
+  717  sudo systemctl stop sshd
+  718  sudo systemctl start --now sshd
+  719  sudo systemctl reload sshd
+  720  sudo systemctl status sshd
+  721  eit
+  722  exit
+  723  history >>h.txt
