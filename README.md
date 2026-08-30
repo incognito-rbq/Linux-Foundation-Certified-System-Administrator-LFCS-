@@ -8,4 +8,5 @@ Actually we should know what's going under the hood, our fundamentals and concep
 In DevOps Journey. here is big difference like watching demos, but when you face production challenges,
 things get messy, and here comes whether you practiced incident based scenarios and you have strong knowledge.
 
+<img width="1772" height="928" alt="image" src="https://github.com/user-attachments/assets/8115eaca-a025-485b-8259-77359cb8b350" />
 
